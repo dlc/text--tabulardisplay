@@ -1,7 +1,7 @@
 package Text::TabularDisplay;
 
 # -------------------------------------------------------------------
-# $Id: TabularDisplay.pm,v 1.1 2005/10/04 16:39:58 dlc Exp $
+# $Id: TabularDisplay.pm,v 1.2 2005/12/09 21:04:48 dlc Exp $
 # -------------------------------------------------------------------
 # Text::TabularDisplay - Display text in formatted table output
 # Copyright (C) 2004 darren chamberlain <darren@cpan.org>
@@ -25,8 +25,8 @@ use strict;
 use integer;
 use vars qw($VERSION $REVISION);
 
-$VERSION = "1.20";  # $Date: 2005/10/04 16:39:58 $
-$REVISION = sprintf "%d.%02d", q$Revision: 1.1 $ =~ /(\d+)\.(\d+)/;
+$VERSION = "1.21";  # $Date: 2005/12/09 21:04:48 $
+$REVISION = sprintf "%d.%02d", q$Revision: 1.2 $ =~ /(\d+)\.(\d+)/;
 
 # ---======================= Public Methods ======================---
 
@@ -263,8 +263,8 @@ sub _format_line {
     for my $h (0 .. $height - 1 ) {
         my @line;
         for (my $i = 0; $i <= $#$columns; $i++) {
-            push @line,
-                sprintf " %-" . $lengths->[$i] . "s ", $col_lines[$i][$h] || '';
+            my $val = defined($col_lines[$i][$h]) ? $col_lines[$i][$h] : '';
+            push @line, sprintf " %-" . $lengths->[$i] . "s ", $val;
         }
         push @lines, join '|', "", @line, "";
     }
