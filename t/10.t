@@ -1,6 +1,5 @@
 #!/usr/bin/perl
 # vim: set ft=perl:
-# $Id: 10.t,v 1.1 2005/10/04 16:39:58 dlc Exp $
 # Test add() chaining.
 
 use strict;

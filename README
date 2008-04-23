@@ -246,9 +246,6 @@ NOTES / ISSUES
     complex monolithic tool that does a lot of things, while
     Text::TabularDisplay is small and fast.
 
-VERSION
-    $Id: README,v 1.1 2005/10/04 16:39:58 dlc Exp $
-
 AUTHOR
     darren chamberlain <darren@cpan.org>
 

@@ -1,6 +1,5 @@
 #!/usr/bin/perl
 # vim: set ft=perl:
-# $Id: 09.t,v 1.1 2005/10/04 16:39:58 dlc Exp $
 # Test clone method
 
 use strict;
