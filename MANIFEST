@@ -5,6 +5,7 @@ examples/mysql.pl
 examples/tdisplay
 Makefile.PL
 MANIFEST
+MANIFEST.SKIP
 README
 t/01.t
 t/02.t
