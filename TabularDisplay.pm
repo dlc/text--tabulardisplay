@@ -23,7 +23,7 @@ use strict;
 use integer;
 use vars qw($VERSION);
 
-$VERSION = "1.22";
+$VERSION = "1.25";
 
 # ---======================= Public Methods ======================---
 
