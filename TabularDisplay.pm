@@ -23,7 +23,7 @@ use strict;
 use integer;
 use vars qw($VERSION);
 
-$VERSION = "1.21";
+$VERSION = "1.22";
 
 # ---======================= Public Methods ======================---
 
@@ -85,7 +85,7 @@ sub columns {
         }
 
         @{ $self->{ _COLUMNS } } = ();
-        _add($self->{ _COLUMNS }, $self->{ _LENGTHS }, \$self->{ _SIZE }, [ @_ ]);
+        $self->_add($self->{ _COLUMNS }, $self->{ _LENGTHS }, \$self->{ _SIZE }, [ @_ ]);
     }
     @columns = @{ $self->{ _COLUMNS }->[0] || [ ]};
 
@@ -103,7 +103,7 @@ sub add {
     my $add = UNIVERSAL::isa($_[0], 'ARRAY') ? shift : [ @_ ];
 
     if (@$add) {
-        _add($self->{ _DATA }, $self->{ _LENGTHS }, \$self->{ _SIZE }, $add);
+        $self->_add($self->{ _DATA }, $self->{ _LENGTHS }, \$self->{ _SIZE }, $add);
     }
 
     return $self;
@@ -222,6 +222,7 @@ sub paginate {
 # Adds @add to @where and modifies @lengths, as necessary
 # -------------------------------------------------------------------
 sub _add {
+    my $self = shift;
     my ($where, $length, $size, $add) = @_;
     my @data;
 
