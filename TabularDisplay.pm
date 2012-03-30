@@ -2,7 +2,7 @@ package Text::TabularDisplay;
 
 # -------------------------------------------------------------------
 # Text::TabularDisplay - Display text in formatted table output
-# Copyright (C) 2004 darren chamberlain <darren@cpan.org>
+# Copyright (C) 2004-2012 darren chamberlain <darren@cpan.org>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License as
@@ -23,7 +23,7 @@ use strict;
 use integer;
 use vars qw($VERSION);
 
-$VERSION = "1.27";
+$VERSION = "1.29";
 
 # ---======================= Public Methods ======================---
 
