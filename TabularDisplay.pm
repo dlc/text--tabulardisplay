@@ -351,7 +351,7 @@ instance; columns() sets the column headers in the output table;
 add() adds data to the instance; and render() returns a formatted
 string representation of the instance.
 
-There are also a few auxilliary convenience methods: clone(), items(),
+There are also a few auxiliary convenience methods: clone(), items(),
 reset(), populate(), and paginate().
 
 =over
@@ -525,7 +525,7 @@ calls to add().
 =head1 NOTES / ISSUES
 
 Text::TabularDisplay assumes it is handling strings, and does stringy
-things with the data, like legnth() and sprintf().  Non-character data
+things with the data, like length() and sprintf().  Non-character data
 can be passed in, of course, but will be treated as strings; this may
 have ramifications for objects that implement overloading.
 
