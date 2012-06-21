@@ -251,7 +251,7 @@ sub _format_line {
     my $height = 0;
     my @col_lines;
     for (@$columns) {
-        my @lines = split "\n";
+        my @lines = split "\n" => ($_ || '');
         $height = scalar @lines
             if $height < @lines;
         push @col_lines, \@lines;
@@ -276,6 +276,7 @@ sub _format_line {
 sub _column_length
 {
     my ($str) = @_;
+    $str ||= '';
 
     my $len = 0;
     for (split "\n", $str) {
