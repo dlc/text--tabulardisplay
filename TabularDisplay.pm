@@ -555,5 +555,5 @@ feedback, or good karma:
 
 =head1 VERSION
 
-This documentation describes C<Text::TabularDisplay> version 1.30.
+This documentation describes C<Text::TabularDisplay> version 1.31.
 
