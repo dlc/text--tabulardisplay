@@ -552,6 +552,7 @@ feedback, or good karma:
     Prakash Kailasa
     Slaven Rezic
     Harlan Lieberman-Berg
+    Patrick Kuijvenhoven
 
 =head1 VERSION
 
