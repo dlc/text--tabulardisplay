@@ -24,5 +24,6 @@ t/13.t
 t/14.t
 t/15.t
 t/16.t
+t/17.t
 TabularDisplay.pm
 META.yml                                 Module meta-data (added by MakeMaker)

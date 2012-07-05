@@ -23,7 +23,7 @@ use strict;
 use integer;
 use vars qw($VERSION);
 
-$VERSION = "1.32";
+$VERSION = "1.33";
 
 # ---======================= Public Methods ======================---
 
@@ -251,7 +251,7 @@ sub _format_line {
     my $height = 0;
     my @col_lines;
     for (@$columns) {
-        my @lines = split "\n", (defined $_ ? $_ : '');
+        my @lines = split "\n", ((defined $_ && length $_) ? $_ : ' ');
         $height = scalar @lines
             if $height < @lines;
         push @col_lines, \@lines;
@@ -556,5 +556,5 @@ feedback, or good karma:
 
 =head1 VERSION
 
-This documentation describes C<Text::TabularDisplay> version 1.32.
+This documentation describes C<Text::TabularDisplay> version 1.33.
 
