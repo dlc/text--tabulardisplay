@@ -9,10 +9,13 @@ use ExtUtils::MakeMaker;
 %clean     = ('FILES' => '$(DISTVNAME).tar$(SUFFIX)');
 
 WriteMakefile(
-    NAME         => __PACKAGE__,
-    VERSION_FROM => "TabularDisplay.pm",
-    PREREQ_PM    => \%PREREQ_PM,
-    clean        => \%clean,
+    NAME            => __PACKAGE__,
+    AUTHOR          => 'darren chamberlain <darren@cpan.org>',
+    LICENSE         => 'perl',
+    ABSTRACT_FROM   => 'TabularDisplay.pm',
+    VERSION_FROM    => "TabularDisplay.pm",
+    PREREQ_PM       => \%PREREQ_PM,
+    clean           => \%clean,
 );
 
 __END__
