@@ -25,4 +25,3 @@ t/15.t
 t/16.t
 t/17.t
 TabularDisplay.pm
-.travis.yml
