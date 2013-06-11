@@ -11,7 +11,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME            => __PACKAGE__,
     AUTHOR          => 'darren chamberlain <darren@cpan.org>',
-    LICENSE         => 'perl',
+    LICENSE         => 'gpl',
     ABSTRACT_FROM   => 'TabularDisplay.pm',
     VERSION_FROM    => "TabularDisplay.pm",
     PREREQ_PM       => \%PREREQ_PM,
