@@ -23,7 +23,7 @@ use strict;
 use integer;
 use vars qw($VERSION);
 
-$VERSION = "1.35";
+$VERSION = "1.36";
 
 # ---======================= Public Methods ======================---
 
@@ -556,5 +556,5 @@ feedback, or good karma:
 
 =head1 VERSION
 
-This documentation describes C<Text::TabularDisplay> version 1.35.
+This documentation describes C<Text::TabularDisplay> version 1.36.
 

@@ -5,7 +5,7 @@ use vars qw(%PREREQ_PM @EXE_FILES %clean);
 
 use ExtUtils::MakeMaker;
 
-%PREREQ_PM = ('IO::File');
+%PREREQ_PM = ();
 %clean     = ('FILES' => '$(DISTVNAME).tar$(SUFFIX)');
 
 WriteMakefile(
