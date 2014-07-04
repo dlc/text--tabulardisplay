@@ -9,8 +9,10 @@ local *PASSWD;
 open PASSWD, "/etc/passwd"
     or die "Can't open /etc/passwd: $!";
 
-$t->add((split /:/, $_)[2, 0, 4])
-    for <PASSWD>;
+for (<PASSWD>) {
+    $t->add((split /:/, $_)[2, 0, 4])
+        unless /^#/;
+}
 
 close PASSWD
     or die "Can't close /etc/passwd: $!";
