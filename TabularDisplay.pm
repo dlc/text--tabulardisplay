@@ -2,7 +2,7 @@ package Text::TabularDisplay;
 
 # -------------------------------------------------------------------
 # Text::TabularDisplay - Display text in formatted table output
-# Copyright (C) 2004-2012 darren chamberlain <darren@cpan.org>
+# Copyright (C) 2004-2014 darren chamberlain <darren@cpan.org>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License as
@@ -23,7 +23,7 @@ use strict;
 use integer;
 use vars qw($VERSION);
 
-$VERSION = "1.36";
+$VERSION = "1.37";
 
 # ---======================= Public Methods ======================---
 
@@ -283,6 +283,11 @@ sub _column_length
         $len = length
             if $len < length;
     }
+
+    # untaint $len
+    unless ($len =~ m|^(\d+)$|s)
+        { die 'invalid length: ' . $len }
+    $len = $1;
 
     return $len;
 }
@@ -553,8 +558,9 @@ feedback, or good karma:
     Slaven Rezic
     Harlan Lieberman-Berg
     Patrick Kuijvenhoven
+    Miko O'Sullivan
 
 =head1 VERSION
 
-This documentation describes C<Text::TabularDisplay> version 1.36.
+This documentation describes C<Text::TabularDisplay> version 1.37.
 
